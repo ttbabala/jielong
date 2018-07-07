@@ -1,0 +1,68 @@
+/* pages/pub/pub.wxss */
+.topbox{
+  width:90%;
+  height:120rpx;
+  float:left;
+  margin-left: 36rpx;
+  background-color: #f5f5f5;
+  border-radius: 25rpx;
+}
+.topboxone{
+  width:30%;
+  height:80%;
+  float: left;
+  margin-left: 25rpx;
+  border-right: 2rpx solid #fff;
+  margin-top: 18rpx;
+}
+.topboxtwo{
+  width:25%;
+  height:80%;
+  float: left;
+  margin-top: 18rpx;
+  margin-bottom:60rpx;
+}
+.number-left{
+  font-size: 32rpx;
+  color:cornflowerblue;
+  margin-left: 70rpx;
+  float: left;
+  margin-top:6rpx;
+}
+.text-left{
+  font-size: 28rpx;
+  color:grey;
+  display:flex;
+  margin-left: 50rpx;
+  float: left;
+}
+.number-middle{
+  font-size: 32rpx;
+  color:coral;
+  margin-left:60rpx;
+  float: left;
+  margin-top:6rpx;
+}
+.text-middle{
+  font-size: 28rpx;
+  color:gray;
+  display:flex;
+  margin-left: 40rpx;
+  float: left;
+}
+.number-right{
+  font-size: 32rpx;
+  color:darkseagreen;
+  margin-left: 60rpx;
+  float: left;
+  margin-top:6rpx;
+}
+.text-right{
+  font-size: 28rpx;
+  color:grey;
+  display:flex;
+  margin-left: 47rpx;
+  float: left;
+}
+
+.warn{}

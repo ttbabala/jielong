@@ -1,0 +1,115 @@
+<!--pages/goods/goods.wxml-->
+<view class="fudong">
+  <image src="/images/qrcode.png" class="fudongimg" bindtap="popqrcode"/>
+  <button open-type="share" class="fudongbutton" style="float:right;"></button>
+</view>
+<view class="{{flagqr?'hidden_qr':'show_qr'}}">
+  <view style="margin:0 auto;text-align:center">
+    <image src="/images/test-qr.jpg" class="qrimg"/>
+    <text class="qrtext">点击小程序码保存可转发到朋友圈</text>
+    <text class="qrtext">点击右上角...可转发给朋友</text>
+    <button class="knowBtn" bindtap='closepopqr'>我知道了</button>
+  </view>
+</view>
+<view class="userinfo">
+      <image src="/images/touxiang1.jpg" class='touxiang'></image>
+      <text class="nickname">时光静好</text>
+      <text class="Abulk">Huawei/华为P20</text>
+      <text class="time">07-02 / 365人浏览</text>
+      <view class="content">
+         <text class="content-one">特点：徕卡双镜头AI智慧全面屏 杜比全景声;尺寸： 大屏5.8英寸 像素：2000万后双摄像头 核心数： 八核 运行内存RAM： 6GB 机身存储： 64GB,128GB 分辨率： 2244*1080 CPU频率：2.36GHz（大四核），1.8GHz（小四核） CPU型号：海思 Kirin 970 电池容量： 持久待机 屏幕材质： TFT LCD（IPS） 款式：直板. </text>
+      </view>
+</view>
+<view class='pbox'>
+   <image src='/images/goods1.jpg' style='width:220rpx;height:200rpx;' class='phone'></image>
+   <image src='/images/p2.jpg' style='width:220rpx;height:200rpx;' class='phone'></image>
+   <image src='/images/goods2.jpg' style='width:220rpx;height:200rpx;' class='phone'></image>
+   <image src='/images/p7.jpg' style='width:220rpx;height:200rpx;' class='phone'></image>
+   <image src='/images/goods3.jpg' style='width:220rpx;height:200rpx;' class='phone'></image>
+   <image src='/images/p6.jpg' style='width:220rpx;height:200rpx;' class='phone'></image>
+</view>
+<view class='tbox'>
+    <image src='/images/tongcheng.png' class='p-one'></image>
+    <text class='wz-one'>支持同城配送</text>
+    <text class='wz-two'>></text>
+</view>
+<view class='tbox'>
+    <image src='/images/dizhi.png' class='p-one'></image>
+    <text class='wz-one'>银川市.西夏区</text>
+    <text class='wz-two'>></text>
+</view>
+<view class='tbox'>
+    <image src='/images/dianhua.png' class='p-one'></image>
+    <text class='wz-one'>18738273817（王先生）</text>
+    <text class='wz-two'>></text>
+</view>
+<view class='tbox'>
+    <image src='/images/shijian.png' class='p-one'></image>
+    <text class='wz-one'>截止时间:2018-07-10 22:00</text>
+    <text class='wz-two'>></text>
+</view>
+<view class='grayline'></view>
+
+<!--数量及库存go-->
+<view class='sbox'>
+  <view class="bigbox">
+     <view class='p-phone'>
+      <image src='/images/goods1.jpg' style='width:200rpx;height:200rpx;' ></image>
+     </view>
+    <view class='wenzi'>
+      <text class='price'>华为P20</text>
+      <text class='stock'>￥3240.00/部</text>
+      <text class='stock-one'>库存5</text>
+    </view>
+    <!-- 处理商品加减start-->
+    <view>
+      <view class="stepper">
+      <!-- 减号 -->
+      <text class="normal" data-index="{{index}}" bindtap="bindMinus">-</text>
+      <!-- 数值 -->
+      <input type="number" data-index="{{index}}" bindchange="bindManual" value="{{goods_num}}" />
+      <!-- 加号 -->
+      <text class="normal" data-index="{{index}}" bindtap="bindPlus">+</text>
+      </view>
+    </view>
+    <!-- 处理商品加减end-->
+  </view>
+  <view class='box-three'>
+    <text class='wz-three'>您已参与0份</text>
+  </view>
+  <view class='gray-one'></view>
+</view>
+
+<!--数量及库存end-->
+
+
+<!--底部go-->
+ <view class='boxtwo'>
+        <view class='xone'>
+            <text class='num'>122</text>
+            <text class='follow'>浏览(人)</text>
+        </view>
+        <view class='xtwo'>
+            <text class='num-one'>0</text>
+            <text class='follow-one'>参与接龙(人)</text>
+        </view>
+        <view class='xthree'>
+            <text class='num-two'>0.00</text>
+            <text class='follow-two'>接龙金额(元)</text>
+        </view>
+ </view>
+ <view class='box-four'>
+    <text class='wz-four'>参与记录</text>
+  </view>
+  <view class='gray-one'></view>
+<view class="footer">
+  <!--<view class="favor">
+    <image src="../../../images/favor.png" class="favor-image" />
+    <text class="favor-text">收藏</text>
+  </view>-->
+  <button class="home" bindtap="navihome">首页</button>
+  <button class="pub" bindtap="navipub">发布接龙</button>
+  <button class="buy" bindtap="navibuy">立即购买(起购20)</button>
+</view>
+
+

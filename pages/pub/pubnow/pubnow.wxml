@@ -1,0 +1,87 @@
+<!--pages/pub/pubnow/pubnow.wxml-->
+<view class="selectTab">
+<view class="nav bc_white">
+<view class="{{selected?'red_article':'default_article'}}" bindtap="selected">设置接龙基本信息</view>
+<view class="{{selected1?'red_goods':'default_goods'}}" bindtap="selected1">设置商品和营销功能</view>
+</view>
+<view class="{{selected?'show':'hidden'}}">
+  <view class="jl-zhuti"> 
+    <input placeholder="接龙主题" type="text"/>
+  </view>
+  <view class="jl-jieshao">
+    <textarea placeholder="介绍您的接龙活动，方便大家参与了解。" />
+    <image src="/images/upimg-icon.png" style="width:80rpx;height:80rpx;" bindtap="choosephoto"></image>
+  </view>
+  <view class="jl-address" bindtap='openmap'>
+    <image src="/images/address-icon.png" style="width:40rpx;height:40rpx;vertical-align:middle;"></image>
+    <text style="vertical-align:middle;">{{roomname}}</text>
+    <text style="float:right;margin-right:10rpx;color:#c4c4c4">></text>
+  </view>
+  <view class="jl-switch">
+    <text class="right-text">设置起购价</text>
+    <switch bindchange="setprice" class="right-swich"/>
+  </view>
+  <view class="jl-hidden-switch {{showprice?'show':'hidden'}}" style="border:none;" >
+    <text class="right-text">起购价</text>
+    <input placeholder="请输入起购价" type="text" class="right-hidden-input"/>
+  </view>
+  <view class="jl-switch">
+    <text class="right-text">设置截止时间</text>
+    <switch bindchange="setdate" class="right-swich"/>
+  </view>
+  <view class="jl-hidden-switch {{showdate?'show':'hidden'}}" style="border:none;" >
+    <text class="right-text">截止时间</text>
+      <picker mode="date" value="{{date}}" bindchange="changeDate" class="right-swich">
+      <view class="setdate">{{date}}</view>
+  </picker>
+  </view>
+  <view class="jl-switch">
+    <text class="right-text">物流及配送设置</text>
+    <switch bindchange="setwuliu" class="right-swich"/>
+  </view>
+  <view class="modal-box" hidden="{{popflag}}" bindtap="hide">
+    <view class="modal-body">
+      <view class="modal-content">
+        <textarea placeholder="您还未添加物流信息，请在此处添加物流信息" style="font-size:24rpx;padding:20rpx;"/>
+        <button class="knowBtn" bindtap="hide">确认添加</button>
+     </view>
+    </view>
+  </view>
+  <button type="warn" loading="{{loading}}" plain="{{plain}}"
+disabled="{{disabled}}" bindtap="nextstep" hover-class="other-button-hover" style="margin-top:20rpx;">继续下一步</button> 
+</view>
+<view class="{{selected1?'show':'hidden'}}">
+ <view class="jl-goodblock"> 
+    <text class="left-info">商品名称：</text>
+    <input placeholder="请输入商品名称" type="text" class="right-input"/>
+ </view>
+ <view class="jl-goodimgup">
+    <text class="left-info">图片上传：</text>
+    <image src="/images/upimg-icon.png" style="width:80rpx;height:80rpx;line-height:80rpx;" bindtap="choosephoto"></image>
+ </view>
+   <view class="jl-goodblock"> 
+    <text class="left-info">商品分类：</text>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" >
+        {{array[index]}}
+    </picker>
+  </view> 
+   <view class="jl-goodblock"> 
+    <text class="left-info">商品规格：</text>
+    <input placeholder="请输入商品规格" type="text" class="right-input"/>
+   </view>
+    <view class="jl-goodblock"> 
+    <text class="left-info">商品价格：</text>
+    <input placeholder="请输入商品价格" type="text" class="right-input"/>
+   </view>
+     <view class="jl-goodblock"> 
+    <text class="left-info">商品库存：</text>
+    <input placeholder="请输入商品库存" type="text" class="right-input"/>
+ </view>
+      <view class="jl-goodblock"> 
+    <text class="left-info">高级营销：</text>
+    <switch bindchange="settime" style="float:right;margin-right:30rpx;"/>
+ </view>
+   <button type="warn" loading="{{loading}}" plain="{{plain}}"
+disabled="{{disabled}}" bindtap="navinow" hover-class="other-button-hover" style="margin-top:20rpx;">发布接龙</button> 
+</view>
+</view>

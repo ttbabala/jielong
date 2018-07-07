@@ -1,0 +1,14 @@
+<!--pages/message/message.wxml-->
+<view class='box'>
+     <view class="boxone">
+        <image src='/images/kefu.png' style="width:70rpx; height:70rpx;"  class="p-one"></image>
+        <text class='kefu'>团购接龙客户</text>
+     </view>
+     <view class="boxtwo">
+        <image src='/images/tongzhi.png' style="width:70rpx; height:70rpx;"  class="p-two"></image>
+        <text class='tongzhi'>系统通知</text>
+     </view>
+     <view class="boxthree">
+         <text class='time'>客服服务时间：工作日9：00-18：00</text>
+     </view>
+</view>

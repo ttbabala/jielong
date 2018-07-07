@@ -1,0 +1,119 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 广告 -->
+  <view class="ad">
+  <!-- <image src='/images/home-ad.jpg' style="width:100%; height:300rpx;"></image> -->
+  <swiper autoplay='true'>
+  <block>
+      <swiper-item>
+        <image src='/images/home-ad1.jpg' style="width:100%; height:300rpx;"></image> 
+      </swiper-item>
+      <swiper-item>
+        <image src='/images/home-ad2.jpg' style="width:100%; height:300rpx;"></image> 
+      </swiper-item>
+  </block>
+  </swiper>
+  </view>
+  <!-- 广告end -->
+
+ <!-- 选项卡 -->
+ <view class="tab">
+    <view bindtap="seltab_hotgoods" class="{{hotgoods?'seltab-selected':'seltab'}}">
+    <image src="{{hotgoods?'/images/hotgoods-blue.png':'/images/hotgoods-hui.png'}}" style="width:50rpx;height:50rpx; vertical-align:middle;margin-right:10rpx;"/>
+    <view class="inseltab"></view>
+    <text>热门推荐</text>
+    </view>    
+    <view bindtap="seltab_fjgoods" class="{{fjgoods?'seltab-selected':'seltab'}}">
+    <image src="{{fjgoods?'/images/fjgoods-blue.png':'/images/fjgoods-hui.png'}}" style="width:50rpx;height:50rpx; vertical-align:middle;margin-right:10rpx;"/>
+    <view class="inseltab"></view>
+    <text>附近接龙</text>
+    </view>
+    <view bindtap="seltab_likegoods" style="border-right:none" class="{{likegoods?'seltab-selected':'seltab'}}">
+    <image src="{{likegoods?'/images/likegoods-blue.png':'/images/likegoods-hui.png'}}" style="width:40rpx;height:40rpx; vertical-align:middle;margin-right:10rpx;"/>
+    <text>我关注的</text>
+    </view>
+ </view>
+ <!-- 选项卡 -->
+ <!-- 热门推荐start -->
+<view class="{{hotgoods?'show':'hidden'}}"> 
+ <view class="row">
+    <view class="userinfo">
+      <image src="/images/touxiang1.jpg" class='touxiang'></image>
+      <text class="nickname">时光静好</text>
+      <text class="Abulk" bindtap='navgoods'>手机团购7.2</text>
+      <text class="time">07-02 / 365人浏览</text>
+      <view class='goodsimg' bindtap='navgoods'>
+      <image src="/images/goods1.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      <image src="/images/goods2.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      <image src="/images/goods3.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      </view>
+      <text class="address">银川市·金凤区-万达广场</text>
+    </view>
+ </view>
+  <view class="row">
+    <view class="userinfo">
+      <image src="/images/touxiang2.jpg" class='touxiang'></image>
+      <text class="nickname"> 喂╮別鬧了</text>
+      <image src="/images/v.png" class="vcertification"></image>
+      <text class="hishome" bindtap='navpersonal'>TA的主页></text>
+      <text class="Abulk">床上三件套团购</text>
+      <text class="time">07-02 / 165人浏览</text>
+      <image src="/images/goods4.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      <image src="/images/goods5.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      <image src="/images/goods6.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      <text class="address">银川市·西夏区-万达广场</text>
+    </view>
+ </view>
+ <view class="row">
+    <view class="userinfo">
+      <image src="/images/touxiang3.jpg" class='touxiang'></image>
+      <text class="nickname"> 維也納的風</text>
+      <text class="Abulk">耳机团购</text>
+      <text class="time">07-02 / 165人浏览</text>
+      <image src="/images/goods4.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      <image src="/images/goods5.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      <image src="/images/goods6.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      <text class="address">银川市·兴庆区-新百超市</text>
+    </view>
+ </view>
+</view>
+<!-- 热门推荐end -->
+ <!-- 附近接龙start -->
+<view class="{{fjgoods?'show':'hidden'}}"> 
+ <view class="row">
+    <view class="userinfo">
+      <image src="/images/touxiang1.jpg" class='touxiang'></image>
+      <text class="nickname">hello树先生</text>
+      <text class="Abulk" bindtap='navgoods'>产品团购</text>
+      <text class="time">07-02 / 365人浏览</text>
+      <view class='goodsimg' bindtap='navgoods'>
+      <image src="/images/goods1.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      <image src="/images/goods2.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      <image src="/images/goods3.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      </view>
+      <text class="address">银川市·金凤区-万达广场</text>
+    </view>
+ </view>
+  <view class="row">
+    <view class="userinfo">
+      <image src="/images/touxiang2.jpg" class='touxiang'></image>
+      <text class="nickname">卖女孩的小火柴</text>
+      <image src="/images/v.png" class="vcertification"></image>
+      <text class="hishome">TA的主页></text>
+      <text class="Abulk">床上三件套团购</text>
+      <text class="time">07-02 / 165人浏览</text>
+      <image src="/images/goods4.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      <image src="/images/goods5.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      <image src="/images/goods6.jpg" style="width:200rpx; height:200rpx;" class="good"></image>
+      <text class="address">银川市·西夏区-万达广场</text>
+    </view>
+ </view>
+</view>
+<!-- 附近接龙end -->
+ <!-- 我关注的start -->
+<view class="{{likegoods?'show':'hidden'}}"> 
+<text style="margin-top:60rpx;">您还没有关注的接龙</text>
+</view>
+<!-- 我关注的end -->
+</view>
+ 

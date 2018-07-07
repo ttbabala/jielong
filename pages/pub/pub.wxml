@@ -1,0 +1,17 @@
+<!--pages/pub/pub.wxml-->
+<view class="topbox">
+     <view class="topboxone">
+         <text class='number-left'>1588</text>
+         <text class='text-left'>接龙数量</text>
+     </view>
+ <view class="topboxone"> 
+         <text class='number-middle'>8888</text>
+         <text class='text-middle'>参与人数</text>
+        </view>
+ <view class="topboxtwo"> 
+         <text class='number-right'>15w+</text>
+         <text class='text-right'>浏览访问</text>
+       </view>
+<button type="warn" loading="{{loading}}" plain="{{plain}}"
+disabled="{{disabled}}" bindtap="navinow" hover-class="other-button-hover"> 马上发布接龙 </button>
+</view>
